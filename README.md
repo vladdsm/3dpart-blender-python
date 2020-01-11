@@ -29,6 +29,10 @@ Use text editor to add main code
 * Make actions by hand
 * Note the change of code and copy that
 
+### Apply smooth operations to the objects
+
+`bpy.ops.object.shade_smooth()`
+
 ### For loops in Python
 
 `from random import randint
