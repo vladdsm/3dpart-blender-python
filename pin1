@@ -33,6 +33,40 @@ bpy.ops.mesh.primitive_cylinder_add(radius=0.0105,
                                     enter_editmode=False,
                                     location=(0,0,0.045))
                                     
+                                    
+# add pin to drill a hole1
+bpy.ops.mesh.primitive_cylinder_add(radius=0.0105, 
+                                    depth = 0.022,
+                                    enter_editmode=False,
+                                    location=(0,0,0.045))
+
+
+# add pin to drill a hole2
+bpy.ops.mesh.primitive_cylinder_add(radius=0.0105, 
+                                    depth = 0.022,
+                                    enter_editmode=False,
+                                    location=(0,0,0.045))
+
+
+                                    
+# add cube with rounded edges
+bpy.ops.mesh.primitive_cube_add(size = 0.012, enter_editmode=True, location=(0, 0, 0.055))
+
+
+
+# increase size of the cube sizes in X dimension
+
+# create bevels on the cube
+
+# go to the Object mode
+
+# boolean operation on the cube
+#bpy.ops.object.editmode_toggle()
+#bpy.ops.object.select_collection(Cylinder.001='SELECT')
+#bpy.ops.object.modifier_add(type='BOOLEAN')
+#bpy.context.object.modifiers["Boolean"].object = bpy.data.objects["Cube"]
+#bpy.ops.object.modifier_apply(apply_as='DATA', modifier="Boolean")
+
 
 #bpy.ops.object.editmode_toggle()
 #bpy.ops.mesh.wireframe()
