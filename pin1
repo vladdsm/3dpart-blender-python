@@ -35,17 +35,20 @@ bpy.ops.mesh.primitive_cylinder_add(radius=0.0105,
                                     
                                     
 # add pin to drill a hole1
-bpy.ops.mesh.primitive_cylinder_add(radius=0.0105, 
+bpy.ops.mesh.primitive_cylinder_add(radius=0.005, 
                                     depth = 0.022,
                                     enter_editmode=False,
-                                    location=(0,0,0.045))
+                                    location=(0,0,0.045),
+                                    rotation=(0,90,0))
 
 
 # add pin to drill a hole2
-bpy.ops.mesh.primitive_cylinder_add(radius=0.0105, 
+bpy.ops.mesh.primitive_cylinder_add(radius=0.005, 
                                     depth = 0.022,
                                     enter_editmode=False,
-                                    location=(0,0,0.045))
+                                    location=(0,0,0.015),
+                                    #align='VIEW',
+                                    rotation=(90,0,0))
 
 
                                     
