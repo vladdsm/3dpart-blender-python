@@ -46,17 +46,19 @@ for i in range(0,number):
 `
 ## Create 3D parts 
 
+Functions help:
+
+https://docs.blender.org/api/2.81/bpy.ops.mesh.html
+
 ### Add cylinder
+bpy.ops.mesh.primitive_cylinder_add(radius=0.0105, 
+                                    depth = 0.022,
+                                    enter_editmode=False,
+                                    location=(0,0,0.045))
 
+### Adds cube with custom size
 
-### Edit mode
-
-Edit mode, wireframe
-
-### Add edge loops
-
-CTRL+ R key
-
+bpy.ops.mesh.primitive_cube_add(size = 0.012, enter_editmode=True, location=(0, 0, 0.055))
 
 
 
