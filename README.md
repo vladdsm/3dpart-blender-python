@@ -60,5 +60,18 @@ bpy.ops.mesh.primitive_cylinder_add(radius=0.0105,
 
 bpy.ops.mesh.primitive_cube_add(size = 0.012, enter_editmode=True, location=(0, 0, 0.055))
 
+### How to rotate things
 
+1. add radians function
+
+from math import radians
+
+2. Rotate using radians(90)
+
+bpy.ops.mesh.primitive_cylinder_add(radius=0.0025, 
+                                    depth = 0.022,
+                                    enter_editmode=False,
+                                    location=(0,0,0.015),
+                                    #align='VIEW',
+                                    rotation=(0,radians(90),0))
 
