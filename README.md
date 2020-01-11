@@ -14,7 +14,10 @@ Use text editor to add main code
 
 `import bpy`
 
-### Remove objects 
+### Select and Remove objects 
+
+`bpy.ops.object.select_all(action='SELECT')`
+`bpy.ops.object.delete(use_global=False)`
 
 ### Add objects
 
