@@ -42,5 +42,21 @@ for i in range(0,number):
     y = randint(-20,20)
     z = randint(-20,20)
     bpy.ops.mesh.primitive_monkey_add(location=(x,y,z))
+
 `
+## Create 3D parts 
+
+### Add cylinder
+
+
+### Edit mode
+
+Edit mode, wireframe
+
+### Add edge loops
+
+CTRL+ R key
+
+
+
 

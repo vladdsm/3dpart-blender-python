@@ -1,0 +1,52 @@
+import bpy
+
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.object.delete(use_global=False)
+
+
+# adds cone on the bottom
+bpy.ops.mesh.primitive_cone_add(radius1=0.002,
+                                radius2=0.006,
+                                depth=0.007,
+                                enter_editmode=False, 
+                                location=(0, 0, 0.0035))
+
+
+
+# add smaller diam cylinder 
+bpy.ops.mesh.primitive_cylinder_add(radius=0.006, 
+                                    depth = 0.025,
+                                    enter_editmode=False,
+                                    location=(0,0,0.0195))
+
+
+# adds a smaller cone
+bpy.ops.mesh.primitive_cone_add(radius1=0.0075,
+                                radius2=0.01,
+                                depth=0.002,
+                                enter_editmode=False, 
+                                location=(0, 0, 0.033))
+
+# add bigger cylinder
+bpy.ops.mesh.primitive_cylinder_add(radius=0.0105, 
+                                    depth = 0.022,
+                                    enter_editmode=False,
+                                    location=(0,0,0.045))
+                                    
+
+#bpy.ops.object.editmode_toggle()
+#bpy.ops.mesh.wireframe()
+
+# add circle on the bottom
+#bpy.ops.mesh.primitive_circle_add(radius=0.006,
+#                                  enter_editmode=False,
+#                                  location=(0, 0, 0))
+
+# add circle to delimit the larger diameter
+#bpy.ops.mesh.primitive_circle_add(radius=0.0105,
+#                                  enter_editmode=True,
+#                                  location=(0, 0, 0.035))
+
+# deselect all                                  
+#bpy.ops.mesh.select_all(action='DESELECT')
+                                  
