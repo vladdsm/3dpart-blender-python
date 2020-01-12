@@ -5,56 +5,67 @@ bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
 
 
-# adds cone on the bottom
-bpy.ops.mesh.primitive_cone_add(radius1=0.002,
-                                radius2=0.006,
-                                depth=0.007,
-                                enter_editmode=False, 
-                                location=(0, 0, 0.0035))
-
-
-
-# add smaller diam cylinder 
-bpy.ops.mesh.primitive_cylinder_add(radius=0.006, 
-                                    depth = 0.025,
-                                    enter_editmode=False,
-                                    location=(0,0,0.0195))
-
-
-# adds a smaller cone
-bpy.ops.mesh.primitive_cone_add(radius1=0.0075,
-                                radius2=0.01,
-                                depth=0.002,
-                                enter_editmode=False, 
-                                location=(0, 0, 0.033))
+### Constructing a solid form
 
 # add bigger cylinder
 bpy.ops.mesh.primitive_cylinder_add(radius=0.0105, 
                                     depth = 0.022,
                                     enter_editmode=False,
-                                    location=(0,0,0.045))
+                                    location=(0,0,0.011))
                                     
-                                   
-# add pin to drill a hole1
-bpy.ops.mesh.primitive_cylinder_add(radius=0.0025, 
+                                    
+# adds a smaller cone
+bpy.ops.mesh.primitive_cone_add(radius1=0.01,
+                                radius2=0.0075,
+                                depth=0.002,
+                                enter_editmode=False, 
+                                location=(0, 0, 0.023))
+                                                                    
+
+# add smaller diam cylinder 
+bpy.ops.mesh.primitive_cylinder_add(radius=0.0059, 
+                                    depth = 0.025,
+                                    enter_editmode=False,
+                                    location=(0,0,0.0365))
+
+# adds cone on the top
+bpy.ops.mesh.primitive_cone_add(radius1=0.0059,
+                                radius2=0.002,
+                                depth=0.007,
+                                enter_editmode=False, 
+                                location=(0, 0, 0.0525))
+
+
+
+### Apply transformations
+
+# add pin to drill a hole 1 on a bigger diameter
+bpy.ops.mesh.primitive_cylinder_add(radius=0.00252, 
                                     depth = 0.052,
                                     enter_editmode=False,
-                                    location=(0,0,0.045),
+                                    location=(0,0,0.006),
                                     rotation=(0,radians(90),0))
 
 
-# add pin to drill a hole2
-bpy.ops.mesh.primitive_cylinder_add(radius=0.0025, 
+# add another pin to drill a hole 2 on a bigger diameter
+bpy.ops.mesh.primitive_cylinder_add(radius=0.004, 
+                                    depth = 0.042,
+                                    enter_editmode=False,
+                                    location=(0,0,0.013),
+                                    #align='VIEW',
+                                    rotation=(radians(90),0,0))
+
+# add pin to drill a hole2 on a smaller diameter
+bpy.ops.mesh.primitive_cylinder_add(radius=0.002, 
                                     depth = 0.022,
                                     enter_editmode=False,
-                                    location=(0,0,0.015),
+                                    location=(0,0,0.039),
                                     #align='VIEW',
                                     rotation=(0,radians(90),0))
 
-
                                     
 # add cube with rounded edges
-bpy.ops.mesh.primitive_cube_add(size = 0.012, enter_editmode=True, location=(0, 0, 0.055))
+bpy.ops.mesh.primitive_cube_add(size = 0.012, enter_editmode=False, location=(0, 0, -0.005))
 
 
 
