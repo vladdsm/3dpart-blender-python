@@ -75,3 +75,14 @@ bpy.ops.mesh.primitive_cylinder_add(radius=0.0025,
                                     #align='VIEW',
                                     rotation=(0,radians(90),0))
 
+
+### How to position parts on Z axis
+
+Example1.
+
+Adding cylinder on top of another cylinder:
+
+- location Z =
+
+-- sums of depth of previous cylinder
+-- plus 1/2 of the depth of the new cylinder
