@@ -10,6 +10,10 @@ https://www.youtube.com/watch?v=gVUvnSJ-t3M
 
 ### Main steps to use Python
 
+Documentations of functions: 
+
+https://docs.blender.org/api/2.81/bpy.ops.mesh.html
+
 Use text editor to add main code
 
 `import bpy`
@@ -86,3 +90,7 @@ Adding cylinder on top of another cylinder:
 
 -- sums of depth of previous cylinder
 -- plus 1/2 of the depth of the new cylinder
+
+
+### How to apply parts transformations within the code
+
