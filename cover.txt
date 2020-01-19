@@ -1,0 +1,82 @@
+import bpy
+from math import radians
+
+# Create a cover for the old boiler
+# Plan:
+# - add 80 mm diameter disk 4 mm high on the bottom first to allow the sensor to pass through the connection 
+# - put the big cylinder
+# - put smaller cylinder in the middle
+# - boolean operation to remove smaller cylinder
+
+
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.object.delete(use_global=False)
+
+
+### Constructing a solid form
+
+# add smaller disk to the bottom
+bpy.ops.mesh.primitive_cylinder_add(radius=0.08, 
+                                    depth = 0.004,
+                                    enter_editmode=False,
+                                    location=(0,0,0.002))
+
+# add a cone to allow additive process
+bpy.ops.mesh.primitive_cone_add(vertices=32, 
+                                radius1=0.08, radius2=0.093,
+                                depth=0.02, end_fill_type='NGON',
+                                calc_uvs=True, enter_editmode=False, align='WORLD', 
+                                location=(0.0, 0.0, 0.014), rotation=(0.0, 0.0, 0.0))
+
+
+# add bigger cylinder
+bpy.ops.mesh.primitive_cylinder_add(radius=0.093, 
+                                    depth = 0.06,
+                                    enter_editmode=False,
+                                    location=(0,0,0.054))
+                                    
+                                    
+
+
+
+### Apply transformations
+# add smaller cylinder
+bpy.ops.mesh.primitive_cylinder_add(radius=0.091, 
+                                    depth = 0.06,
+                                    enter_editmode=False,
+                                    location=(0,0,0.055))
+
+                                    
+# add cube to delimit internal cut
+#bpy.ops.mesh.primitive_cube_add(size = 0.0124, enter_editmode=False, location=(0, 0, 0.0055))
+
+# increase size of the cube sizes in X dimension
+
+# create bevels on the cube
+
+# go to the Object mode
+
+# boolean operation on the cube
+#bpy.ops.object.editmode_toggle()
+#bpy.ops.object.select_collection(Cylinder.001='SELECT')
+#bpy.ops.object.modifier_add(type='BOOLEAN')
+#bpy.context.object.modifiers["Boolean"].object = bpy.data.objects["Cube"]
+#bpy.ops.object.modifier_apply(apply_as='DATA', modifier="Boolean")
+
+
+#bpy.ops.object.editmode_toggle()
+#bpy.ops.mesh.wireframe()
+
+# add circle on the bottom
+#bpy.ops.mesh.primitive_circle_add(radius=0.006,
+#                                  enter_editmode=False,
+#                                  location=(0, 0, 0))
+
+# add circle to delimit the larger diameter
+#bpy.ops.mesh.primitive_circle_add(radius=0.0105,
+#                                  enter_editmode=True,
+#                                  location=(0, 0, 0.035))
+
+# deselect all                                  
+#bpy.ops.mesh.select_all(action='DESELECT')
+                                  
